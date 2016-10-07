@@ -33,7 +33,7 @@ The overall process consists of five discrete steps:
 
 Before proceeding, you must register for a free account on [Galaxy](https://usegalaxy.org). It's fast, and importantly, free. After logging in, you should arrive at a screen that looks like this:
 
-![](/Users/kshank/Desktop/Giles_RNA_Seq_Analysis/Galaxy_HomeScreen.tiff)
+![](/Users/kshank/Github/GilesRNASeqGuide/Galaxy_HomeScreen.tiff)
 
 ***
 
@@ -49,7 +49,7 @@ Click on [this link](http://bacteria.ensembl.org/Mycobacterium_smegmatis_str_mc2
 
 Beneath the section labeled "Gene Annotation", click on the __FASTA__ link.
 
-![This is the proper place to click to fetch the FASTA file](/Users/kshank/Desktop/Giles_RNA_Seq_Analysis/BactEnsembl_FASTA.tiff)
+![This is the proper place to click to fetch the FASTA file](/Users/kshank/Github/GilesRNASeqGuide/BactEnsembl_FASTA.tiff)
 
 When prompted, make sure to choose to continue your download as a _Guest_. A directory will then be downloaded. Within it are several sub-directories: `cdna`, `cds`, `dna`, `ncrna`, `pep`. Open `dna`. From here, save the file marked `Mycobacterium_smegmatis_str_mc2_155.ASM1500v1.dna_sm.toplevel.fa.gz` to your working directory on your local machine. 
 
@@ -65,19 +65,19 @@ Genome annotation can be one of the more difficult problems tackled in bioinform
 
 From the Galaxy homepage, select __Get Data__.
 
-![](/Users/kshank/Desktop/Giles_RNA_Seq_Analysis/Galaxy_GetData.tiff)
+![](/Users/kshank/Github/GilesRNASeqGuide/Galaxy_GetData.tiff)
 
 <br>
 Next, click __Upload File from your computer__
   
    
-![](/Users/kshank/Desktop/Giles_RNA_Seq_Analysis/Galaxy_UploadFileFromYourComputer.tiff)
+![](/Users/kshank/Github/GilesRNASeqGuide/Galaxy_UploadFileFromYourComputer.tiff)
 
 <br>
 
 Drag and drop both files that you wish to upload. Under `Type`, make sure to change the set the Geneome Assembly file to `fasta` and the Genome Annotation file to `gtf`. Click __Start__.
 
-![](/Users/kshank/Desktop/Giles_RNA_Seq_Analysis/Galaxy_UploadScreen.tiff)
+![](/Users/kshank/Github/GilesRNASeqGuide/Galaxy_UploadScreen.tiff)
 
 <br>
 Click __close__. You can now see in your history bar (on the right) that you've successfully uploaded both files. 
@@ -94,12 +94,12 @@ The reads for the Giles RNA-Seq study were initially deposited in the [NCBI Shor
 
 Navigate to the ENA and enter the [Gene Expression Omnibus](https://www.ncbi.nlm.nih.gov/geo/) accession for this study, GSE43434. Click __Search__.
 
-![](/Users/kshank/Desktop/Giles_RNA_Seq_Analysis/ENA_Search.tiff)
+![](/Users/kshank/Github/GilesRNASeqGuide/ENA_Search.tiff)
 
 <br>
 On the results page, select the first link (`SRP017906`) to look at the study. 
 
-![](/Users/kshank/Desktop/Giles_RNA_Seq_Analysis/ENA_Results.tiff)
+![](/Users/kshank/Github/GilesRNASeqGuide/ENA_Results.tiff)
 
 ***
 
@@ -107,17 +107,17 @@ On the results page, select the first link (`SRP017906`) to look at the study.
 
 On the results page, make note of the `SSR-` values in the _Run accession_ column. Each of these files is an individual run through the sequencing machine. Copy the first string you see (`SSR647673`). 
 
-![](/Users/kshank/Desktop/Giles_RNA_Seq_Analysis/ENA_ResultsList.tiff)
+![](/Users/kshank/Github/GilesRNASeqGuide/ENA_ResultsList.tiff)
 
 <br>
 Return to Galaxy. From the toolbar, select __NCBI SRA Tools__. Then select __Extract reads in FASTQ/A format from NCBI SRA__.
 
-![](/Users/kshank/Desktop/Giles_RNA_Seq_Analysis/Galaxy_NCBITools.tiff)
+![](/Users/kshank/Github/GilesRNASeqGuide/Galaxy_NCBITools.tiff)
 
 <br>
 On this page, paste your copied run accession code (`SSR647673`) into the appropriate blank field. Then click execute. 
 
-![](/Users/kshank/Desktop/Giles_RNA_Seq_Analysis/Galaxy_ExtractReads.tiff)
+![](/Users/kshank/Github/GilesRNASeqGuide/Galaxy_ExtractReads.tiff)
 
 <br>
 This will add the file (as a pending job) to your history on the right. Not that this process can take quite a bit of time to complete. Repeat the above for the other three `SSR-` files (`SSR647674`,`SSR647675`). Note that these files will be in the `fastqsanger` format.
@@ -144,13 +144,13 @@ The main functions of FastQC are:
 
 From the Galaxy toolbar, click __NGS: QC and manipulation__. Then click __FastQC__.
 
-![](/Users/kshank/Desktop/Giles_RNA_Seq_Analysis/Galaxy_FindFastQC.tiff)
+![](/Users/kshank/Github/GilesRNASeqGuide/Galaxy_FindFastQC.tiff)
 
 <br>
 
 Select one of your `FASTQ` files from the history to read in. Note that these files may have different referneces in your own history (in the example, the 3 `FASTQ` files imported from ENA are called 9: Extract Reads, 10: Extract Reads, and 11: Extra Reads). Then click __Execute__
 
-![](/Users/kshank/Desktop/Giles_RNA_Seq_Analysis/Galaxy_RunFastQC.tiff)
+![](/Users/kshank/Github/GilesRNASeqGuide/Galaxy_RunFastQC.tiff)
 
 ***
 
@@ -158,7 +158,7 @@ Select one of your `FASTQ` files from the history to read in. Note that these fi
 
 You will see two new additions to your history bar: a FastQC "RawData" file, and a FastQC "Webpage". You can download this file to your desktop and examine the FastQC Output. The main file of interest is the `html` file. Upon opening, you should see something similar to this:
 
-![](/Users/kshank/Desktop/Giles_RNA_Seq_Analysis/FastQC.tiff)
+![](/Users/kshank/Github/GilesRNASeqGuide/FastQC.tiff)
 
 
 ***
@@ -173,13 +173,13 @@ Mapping refers to the process of aligning short reads to a reference sequence, w
 
 Click __NGS: Mapping__. Then click __Map with Bowtie for Illumina__.
 
-![](/Users/kshank/Desktop/Giles_RNA_Seq_Analysis/Galaxy_FindBowtie.tiff)
+![](/Users/kshank/Github/GilesRNASeqGuide/Galaxy_FindBowtie.tiff)
 
 <br>
 
 In the first blank area ("_Will you select a reference genome..._?"), select __Use one from the history__. Then, choose your reference genome (`Mycobacterium_smegmatis_str_mc2_155.ASM1500v1.dna_sm.toplevel.fa.gz`). Leave the rest of the settings as they are - but make note of the `FASTQ` file that you are performing the mapping on, as you'll need to repeat this step for each of the three _FASTQ_ files that you've loaded into Galaxy. When you're ready, click __Execute__. 
 
-![](/Users/kshank/Desktop/Giles_RNA_Seq_Analysis/Galaxy_UseBowtie.tiff)
+![](/Users/kshank/Github/GilesRNASeqGuide/Galaxy_UseBowtie.tiff)
 
 <br>
 
@@ -199,13 +199,13 @@ To perform this task, we will use the `htseq-count` program.
 
 From the toolbar, click __NGS: RNA Analysis__. Then click __htseq-count__.
 
-![](/Users/kshank/Desktop/Giles_RNA_Seq_Analysis/Galaxy_FindHTSeq.tiff)
+![](/Users/kshank/Github/GilesRNASeqGuide/Galaxy_FindHTSeq.tiff)
 
 <br>
 
 In the first input ("Aligned SAM/BAM file"), select one of the `SAM` files generated from `bowtie`. Then, make sure your `gtf` file is in the second input ("GFF File"). Leave the rest of the parameters as they are. Click __Execute__.
 
-![](/Users/kshank/Desktop/Giles_RNA_Seq_Analysis/Galaxy_RunHTSeq.tiff)
+![](/Users/kshank/Github/GilesRNASeqGuide/Galaxy_RunHTSeq.tiff)
 
 ***
 
