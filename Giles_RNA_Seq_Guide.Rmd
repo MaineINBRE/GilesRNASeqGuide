@@ -1,14 +1,16 @@
 ---
-title: RNA-seq Analysis with Galaxy.
-author: |
-  | Benjamin King, PhD | bking@mdibl.org | Kyle Shank | kshank@mdibl.org | 
+title: "RNA-seq Analysis with Galaxy."
+author: "| Benjamin King, PhD | bking@mdibl.org | Kyle Shank | kshank@mdibl.org |
+  \n"
 output:
   html_document:
+    fig_caption: yes
     theme: lumen
-    fig_caption: true
-    toc: true
+    toc: yes
     toc_float:
-      collapsed: false
+      collapsed: no
+  pdf_document:
+    toc: yes
 ---
 ```{r global_options, include=FALSE}
 knitr::opts_chunk$set(fig.align='center')
