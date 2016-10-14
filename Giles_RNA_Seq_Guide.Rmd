@@ -107,7 +107,7 @@ On the results page, select the first link (`SRP017906`) to look at the study.
 
 ### Import into Galaxy
 
-On the results page, make note of the `SSR-` values in the _Run accession_ column. Each of these files is an individual run through the sequencing machine. Copy the first string you see (`SSR647673`). 
+On the results page, make note of the `SRR-` values in the _Run accession_ column. Each of these files is an individual run through the sequencing machine. Copy the first string you see (`SRR647673`). 
 
 ![](/Users/kshank/Github/GilesRNASeqGuide/ENA_ResultsList.tiff)
 
@@ -117,12 +117,12 @@ Return to Galaxy. From the toolbar, select __NCBI SRA Tools__. Then select __Ext
 ![](/Users/kshank/Github/GilesRNASeqGuide/Galaxy_NCBITools.tiff)
 
 <br>
-On this page, paste your copied run accession code (`SSR647673`) into the appropriate blank field. Then click execute. 
+On this page, paste your copied run accession code (`SRR647673`) into the appropriate blank field. Then click execute. 
 
 ![](/Users/kshank/Github/GilesRNASeqGuide/Galaxy_ExtractReads.tiff)
 
 <br>
-This will add the file (as a pending job) to your history on the right. Not that this process can take quite a bit of time to complete. Repeat the above for the other three `SSR-` files (`SSR647674`,`SSR647675`). Note that these files will be in the `fastqsanger` format.
+This will add the file (as a pending job) to your history on the right. Not that this process can take quite a bit of time to complete. Repeat the above for the other three `SRR-` files (`SRR647674`,`SRR647675`). Note that these files will be in the `fastqsanger` format.
 
 ***
 
