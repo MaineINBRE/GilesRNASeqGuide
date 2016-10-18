@@ -19,7 +19,7 @@ knitr::opts_chunk$set(fig.align='center')
 
 # Objective
 
-Align a set of RNA-seq reads to the _Mycobacterium smegmatis_ MC2 155 genome assembly and perform a basic analysis.
+Align a set of RNA-seq reads from the *Mycobacterium* phage Giles to the _Mycobacterium smegmatis_ MC2 155 genome assembly and perform a basic analysis.
 
 The overall process consists of five discrete steps:
 
