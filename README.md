@@ -1,25 +1,7 @@
----
-title: "RNA-seq Analysis with Galaxy - Aligning Reads to a Bacterial Genome"
-author: "| Benjamin King, PhD | bking@mdibl.org | Kyle Shank | kshank@mdibl.org |
-  \n"
-output:
-  html_document:
-    fig_caption: yes
-    theme: lumen
-    toc: yes
-    toc_float:
-      collapsed: no
-  pdf_document:
-    toc: yes
----
-```{r global_options, include=FALSE}
-knitr::opts_chunk$set(fig.align='center')
-```
-***
 
-# Objective
+# RNA-seq Analysis with Galaxy - Aligning Reads to a Bacterial Genome
 
-Align a set of RNA-seq reads from the *Mycobacterium* phage Giles to the _Mycobacterium smegmatis_ MC2 155 genome assembly and perform a basic analysis.
+The objective of this tutorial is to align a set of RNA-seq reads from the *Mycobacterium* phage Giles to its host’s genome and perform a basic analysis (i.e., obtain a table of counts).
 
 The overall process consists of five discrete steps:
 
@@ -210,6 +192,3 @@ In the first input ("Aligned SAM/BAM file"), select one of the `SAM` files gener
 ![](Galaxy_RunHTSeq.tiff)
 
 ***
-
-
-
