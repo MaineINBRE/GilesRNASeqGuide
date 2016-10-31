@@ -211,5 +211,9 @@ In the first input ("Aligned SAM/BAM file"), select one of the `SAM` files gener
 
 ***
 
+When you've completed the above, don't forget to download the output files (which will be `.txt` files) to your local machine for downstream analysis!
+
+***
+
 
 
